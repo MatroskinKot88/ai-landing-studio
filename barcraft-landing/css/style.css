@@ -1,0 +1,250 @@
+/* 
+  БЭМ-структура:
+  - Блок: .hero, .features, .btn и т.д.
+  - Элемент: .hero__title, .features__item и т.д.
+  - Модификаторы не использованы (но можно добавить позже, например: .btn--primary)
+*/
+
+/* === Общие стили === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Переменные темы */
+:root {
+  --color-dark: #1a1a1a;
+  --color-darker: #111;
+  --color-light-dark: #2d2d2d;
+  --color-accent: #c0c0c0;
+  --color-bg-light: #f5f5f5;
+  --color-white: #fff;
+  --color-text: #333;
+  --color-placeholder: #aaa;
+}
+
+/* Универсальный класс кнопки */
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* Контейнеры */
+.hero__container,
+.features__container,
+.products__container,
+.cta__container,
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Hero === */
+.hero {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-light-dark) 100%);
+  color: var(--color-white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  opacity: 0.9;
+}
+
+/* === Преимущества === */
+.features {
+  padding: 80px 0;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.features__title {
+  font-size: 2.2rem;
+  margin-bottom: 48px;
+  color: var(--color-dark);
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  list-style: none;
+}
+
+.features__item {
+  padding: 30px 20px;
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.features__item-title {
+  font-size: 1.4rem;
+  margin: 16px 0;
+  color: var(--color-dark);
+}
+
+/* === Продукция === */
+.products {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+  text-align: center;
+}
+
+.products__title {
+  font-size: 2.2rem;
+  margin-bottom: 48px;
+  color: var(--color-dark);
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  list-style: none;
+}
+
+.products__item {
+  background: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.products__item-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--color-dark);
+}
+
+/* === CTA === */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-light-dark) 0%, var(--color-dark) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cta__title {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+.cta__subtitle {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Форма */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form__group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form__input,
+.form__select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #333;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form__select {
+  background: #333 url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 10px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__btn {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  background: var(--color-darker);
+  color: var(--color-placeholder);
+  font-size: 0.9rem;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .features__title,
+  .products__title,
+  .cta__title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
