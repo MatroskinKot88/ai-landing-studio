@@ -19,7 +19,7 @@
   - Продающий hero-блок с ROI-заголовком  
   - Модульные компоненты (отзывы, тарифы) по БЭМ  
   - Контент с социальным доказательством и сроками  
-- [Посмотреть демо](https://matroskinkot88.github.io/ai-landing-studio/barcraft-pro/) | [Исходный код](barcraft-pro/)
+- [Посмотреть демо](https://matroskinkot88.github.io/ai-landing-studio/barcraft-landing/) | [Исходный код](barcraft-landing/)
 
 ---
 
